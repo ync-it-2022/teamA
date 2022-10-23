@@ -213,7 +213,8 @@
 		</dependency>
 		
 	</dependencies>
-    <build>
+     <build>
+    	<finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
