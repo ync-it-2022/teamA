@@ -4,16 +4,16 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import kr.ac.ync.domain.BoardVO;
-import kr.ac.ync.domain.Criteria;
-import kr.ac.ync.mapper.BoardMapper;
+import kr.ac.ync.domain.BoardVOExample;
+import kr.ac.ync.domain.CriteriaExample;
+import kr.ac.ync.mapper.BoardMapperExample;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Service
 @AllArgsConstructor
-public class BoardServiceImpl implements BoardService {
+public class BoardServiceImplExample implements BoardServiceExample {
 
 	// @Setter(onMethod_ = @Autowired)
 	// 스프링 4.3 이후 부터 묵시적 주입
@@ -21,10 +21,10 @@ public class BoardServiceImpl implements BoardService {
 	// Java Proxy 기법을 활용해 Mybatis는 MapperProxy라는 InvocationHandler 구현체를 이용하여
 	// 인터페이스의 구현체를 동적으로 생성
 	// @Autowired
-	private final BoardMapper mapper;
+	private final BoardMapperExample mapper;
 
 	@Override
-	public void register(BoardVO board) {
+	public void register(BoardVOExample board) {
 
 		log.info("register......" + board);
 
@@ -32,7 +32,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public BoardVO get(Long bno) {
+	public BoardVOExample get(Long bno) {
 
 		log.info("get......" + bno);
 
@@ -41,7 +41,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public boolean modify(BoardVO board) {
+	public boolean modify(BoardVOExample board) {
 
 		log.info("modify......" + board);
 
@@ -59,7 +59,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<BoardVO> getList(Criteria cri) {
+	public List<BoardVOExample> getList(CriteriaExample cri) {
 
 		log.info("get List with criteria..........");
 
@@ -67,7 +67,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public int getTotal(Criteria cri) {
+	public int getTotal(CriteriaExample cri) {
 
 		log.info("get total count");
 		return mapper.getTotalCount(cri);

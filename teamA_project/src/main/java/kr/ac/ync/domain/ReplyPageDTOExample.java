@@ -7,8 +7,8 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class ReplyPageDTO {
+public class ReplyPageDTOExample {
 
 	private int replyCnt;
-	private List<ReplyVO> list;
+	private List<ReplyVOExample> list;
 }

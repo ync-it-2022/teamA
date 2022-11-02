@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class Criteria {
+public class CriteriaExample {
 
 	private int pageNum;
 	private int amount;
@@ -17,11 +17,11 @@ public class Criteria {
 	private String type;
 	private String keyword;
 
-	public Criteria() {
+	public CriteriaExample() {
 		this(1, 10);
 	}
 
-	public Criteria(int pageNum, int amount) {
+	public CriteriaExample(int pageNum, int amount) {
 
 		this.pageNum = pageNum;
 		this.amount = amount;

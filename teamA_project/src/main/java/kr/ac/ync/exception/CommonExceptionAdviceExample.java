@@ -11,7 +11,7 @@ import lombok.extern.log4j.Log4j2;
 
 @ControllerAdvice
 @Log4j2
-public class CommonExceptionAdvice {
+public class CommonExceptionAdviceExample {
 
 	@ExceptionHandler(Exception.class)
 	public String except(Exception ex, Model model) {

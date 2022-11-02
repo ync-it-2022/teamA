@@ -17,7 +17,7 @@ import net.coobird.thumbnailator.Thumbnailator;
 
 @Controller
 @Log4j2
-public class UploadUtils {
+public class UploadUtilsExample {
 
 	private static String getFolder() {
 

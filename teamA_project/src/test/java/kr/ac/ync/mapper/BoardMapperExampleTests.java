@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import kr.ac.ync.domain.BoardVO;
-import kr.ac.ync.domain.Criteria;
-import kr.ac.ync.mapper.BoardMapper;
+import kr.ac.ync.domain.BoardVOExample;
+import kr.ac.ync.domain.CriteriaExample;
+import kr.ac.ync.mapper.BoardMapperExample;
 import lombok.extern.log4j.Log4j2;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -18,10 +18,10 @@ import lombok.extern.log4j.Log4j2;
 // Java Config
 // @ContextConfiguration(classes = {org.zerock.config.RootConfig.class} )
 @Log4j2
-public class BoardMapperTests {
+public class BoardMapperExampleTests {
 
 	@Autowired
-	private BoardMapper mapper;
+	private BoardMapperExample mapper;
 
 //	@Test
 //	public void testGetList() {
@@ -97,14 +97,14 @@ public class BoardMapperTests {
 	@Test
 	public void testPaging() {
 
-		Criteria cri = new Criteria();
+		CriteriaExample cri = new CriteriaExample();
 		
 	    //10개씩 3페이지 
 	    cri.setPageNum(2);
 	    cri.setAmount(10);
 
 
-		List<BoardVO> list = mapper.getListWithPaging(cri);
+		List<BoardVOExample> list = mapper.getListWithPaging(cri);
 
 		list.forEach(board -> log.info(board));
 

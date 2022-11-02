@@ -25,7 +25,7 @@ import lombok.extern.log4j.Log4j2;
 // org.zerock.config.RootConfig.class,
 // org.zerock.config.ServletConfig.class} )
 @Log4j2
-public class BoardControllerTests {
+public class BoardControllerExampleTests {
 
 	//@Setter(onMethod_ = { @Autowired })
 	@Autowired

@@ -12,7 +12,7 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
-public class CustomAccessDeniedHandler implements AccessDeniedHandler {
+public class CustomAccessDeniedHandlerExample implements AccessDeniedHandler {
 
 	@Override
 	public void handle(HttpServletRequest request,

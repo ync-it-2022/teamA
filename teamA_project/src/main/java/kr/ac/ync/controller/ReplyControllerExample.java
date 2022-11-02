@@ -14,19 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import kr.ac.ync.domain.Criteria;
-import kr.ac.ync.domain.ReplyPageDTO;
-import kr.ac.ync.domain.ReplyVO;
-import kr.ac.ync.service.ReplyService;
+import kr.ac.ync.domain.CriteriaExample;
+import kr.ac.ync.domain.ReplyPageDTOExample;
+import kr.ac.ync.domain.ReplyVOExample;
+import kr.ac.ync.service.ReplyServiceExample;
 import lombok.extern.log4j.Log4j2;
 
 @RequestMapping("/replies/")
 @RestController
 @Log4j2
-public class ReplyController {
+public class ReplyControllerExample {
 	
 	@Autowired
-	private ReplyService service;
+	private ReplyServiceExample service;
 	
 	// consumes은 호출하는쪽에서 application/json 요청만 받아들인다. 요청 컨텐트 타입 제한
 	// produces은 조건에 지정한 미디어 타입과 관련된 응답을 생성. 응답 컨텐트 타입 제한
@@ -35,7 +35,7 @@ public class ReplyController {
 				 consumes = "application/json",
 				 produces = { MediaType.TEXT_PLAIN_VALUE })
 	@PreAuthorize("isAuthenticated()")
-	public ResponseEntity<String> create(@RequestBody ReplyVO vo) {
+	public ResponseEntity<String> create(@RequestBody ReplyVOExample vo) {
 
 		log.info("ReplyVO: " + vo);
 
@@ -52,7 +52,7 @@ public class ReplyController {
 	@GetMapping(value = "/{rno}",
 				produces = { MediaType.APPLICATION_XML_VALUE,
 							 MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<ReplyVO> get(@PathVariable("rno") Long rno) {
+	public ResponseEntity<ReplyVOExample> get(@PathVariable("rno") Long rno) {
 
 		log.info("get: " + rno);
 
@@ -66,7 +66,7 @@ public class ReplyController {
 					method = { RequestMethod.PUT, RequestMethod.PATCH },
 					consumes = "application/json",
 					produces = { MediaType.TEXT_PLAIN_VALUE })
-	public ResponseEntity<String> modify(@RequestBody ReplyVO vo, @PathVariable("rno") Long rno) {
+	public ResponseEntity<String> modify(@RequestBody ReplyVOExample vo, @PathVariable("rno") Long rno) {
 
 		vo.setRno(rno);
 
@@ -83,7 +83,7 @@ public class ReplyController {
 	@DeleteMapping(value = "/{rno}",
 				   consumes = "application/json",
 				   produces = { MediaType.TEXT_PLAIN_VALUE })
-	public ResponseEntity<String> remove(@RequestBody ReplyVO vo, @PathVariable("rno") Long rno) {
+	public ResponseEntity<String> remove(@RequestBody ReplyVOExample vo, @PathVariable("rno") Long rno) {
 
 		log.info("remove: " + rno);
 		log.info("replyer: " + vo.getReplyer());
@@ -98,9 +98,9 @@ public class ReplyController {
 	@GetMapping(value = "/pages/{bno}/{page}",
 				produces = { MediaType.APPLICATION_XML_VALUE,
 							 MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<ReplyPageDTO> getList(@PathVariable("page") int page, @PathVariable("bno") Long bno) {
+	public ResponseEntity<ReplyPageDTOExample> getList(@PathVariable("page") int page, @PathVariable("bno") Long bno) {
 
-		Criteria cri = new Criteria(page, 10);
+		CriteriaExample cri = new CriteriaExample(page, 10);
 		
 		log.info("get Reply List bno: " + bno);
 		log.info("cri:" + cri);

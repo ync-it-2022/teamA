@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import kr.ac.ync.domain.Criteria;
-import kr.ac.ync.service.BoardService;
+import kr.ac.ync.domain.CriteriaExample;
+import kr.ac.ync.service.BoardServiceExample;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
 
@@ -16,10 +16,10 @@ import lombok.extern.log4j.Log4j2;
 // Java Config
 // @ContextConfiguration(classes = {org.zerock.config.RootConfig.class} )
 @Log4j2
-public class BoardServiceTests {
+public class BoardServiceExampleTests {
 
 	@Setter(onMethod_ = { @Autowired })
-	private BoardService service;
+	private BoardServiceExample service;
 
 //	@Test
 //	public void testExist() {
@@ -44,7 +44,7 @@ public class BoardServiceTests {
 	@Test
 	public void testGetList() {
 //		service.getList().forEach(board -> log.info(board));
-		service.getList(new Criteria(2, 10)).forEach(board -> log.info(board));
+		service.getList(new CriteriaExample(2, 10)).forEach(board -> log.info(board));
 	}
 
 //	@Test

@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import kr.ac.ync.domain.Criteria;
-import kr.ac.ync.domain.ReplyVO;
-import kr.ac.ync.mapper.ReplyMapper;
+import kr.ac.ync.domain.CriteriaExample;
+import kr.ac.ync.domain.ReplyVOExample;
+import kr.ac.ync.mapper.ReplyMapperExample;
 import lombok.extern.log4j.Log4j2;
 
 @RunWith(SpringRunner.class)
@@ -19,13 +19,13 @@ import lombok.extern.log4j.Log4j2;
 // @ContextConfiguration(classes = { org.zerock.config.PersistenceConfig.class
 // })
 @Log4j2
-public class ReplyMapperTests {
+public class ReplyMapperExampleTests {
 
 	// 테스트 전에 해당 번호의 게시물이 존재하는지 반드시 확인할 것
 	private Long[] bnoArr = { 4L, 5L, 6L, 7L, 8L };
 
 	@Autowired
-	private ReplyMapper mapper;
+	private ReplyMapperExample mapper;
 
 //	@Test
 //	public void testCreate() {

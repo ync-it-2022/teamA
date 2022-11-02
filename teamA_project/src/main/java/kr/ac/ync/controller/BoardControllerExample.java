@@ -13,23 +13,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import kr.ac.ync.domain.BoardVO;
-import kr.ac.ync.domain.Criteria;
-import kr.ac.ync.domain.PageDTO;
-import kr.ac.ync.service.BoardService;
-import kr.ac.ync.util.UploadUtils;
+import kr.ac.ync.domain.BoardVOExample;
+import kr.ac.ync.domain.CriteriaExample;
+import kr.ac.ync.domain.PageDTOExample;
+import kr.ac.ync.service.BoardServiceExample;
+import kr.ac.ync.util.UploadUtilsExample;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
 @RequestMapping("/board/*")
-public class BoardController {
+public class BoardControllerExample {
 
 	@Value("${globalConfig.uploadPath}")
 	private String uploadPath;
 
 	@Autowired
-	private BoardService service;
+	private BoardServiceExample service;
 
 	@GetMapping("/register")
 	@PreAuthorize("isAuthenticated()")
@@ -39,20 +39,20 @@ public class BoardController {
 	// file upload가 추가된 게시판 등록
 	@PostMapping("/register")
 	@PreAuthorize("isAuthenticated()")
-	public String register(MultipartFile[] uploadFile, BoardVO board, RedirectAttributes rttr) {
+	public String register(MultipartFile[] uploadFile, BoardVOExample board, RedirectAttributes rttr) {
 
 		int index = 0;
 		for (MultipartFile multipartFile : uploadFile) {
 			if (multipartFile.getSize() > 0) {
 				switch (index) {
 				case 0:
-					board.setFile_1(UploadUtils.uploadFormPost(multipartFile, uploadPath));
+					board.setFile_1(UploadUtilsExample.uploadFormPost(multipartFile, uploadPath));
 					break;
 				case 1:
-					board.setFile_2(UploadUtils.uploadFormPost(multipartFile, uploadPath));
+					board.setFile_2(UploadUtilsExample.uploadFormPost(multipartFile, uploadPath));
 					break;
 				default:
-					board.setFile_3(UploadUtils.uploadFormPost(multipartFile, uploadPath));
+					board.setFile_3(UploadUtilsExample.uploadFormPost(multipartFile, uploadPath));
 					break;
 				}
 			}
@@ -67,7 +67,7 @@ public class BoardController {
 	}
 
 	@GetMapping("/list")
-	public void list(Criteria cri, Model model) {
+	public void list(CriteriaExample cri, Model model) {
 
 		log.info("list: " + cri);
 
@@ -75,12 +75,12 @@ public class BoardController {
 		int total = service.getTotal(cri);
 		log.info("total: " + total);
 		model.addAttribute("list", service.getList(cri));
-		model.addAttribute("pageMaker", new PageDTO(cri, total));
+		model.addAttribute("pageMaker", new PageDTOExample(cri, total));
 
 	}
 
 	@GetMapping({ "/get", "/modify" })
-	public void get(@RequestParam("bno") Long bno, @ModelAttribute("cri") Criteria cri, Model model) {
+	public void get(@RequestParam("bno") Long bno, @ModelAttribute("cri") CriteriaExample cri, Model model) {
 
 		log.info("/get or modify");
 		model.addAttribute("board", service.get(bno));
@@ -88,8 +88,8 @@ public class BoardController {
 
 	@PostMapping("/modify")
 	@PreAuthorize("principal.member.userid == #board.writer")
-	public String modify(MultipartFile[] uploadFile, BoardVO board,
-						 @ModelAttribute("cri") Criteria cri, RedirectAttributes rttr) {
+	public String modify(MultipartFile[] uploadFile, BoardVOExample board,
+						 @ModelAttribute("cri") CriteriaExample cri, RedirectAttributes rttr) {
 
 		int index = 0;
 		for (MultipartFile multipartFile : uploadFile) {
@@ -97,13 +97,13 @@ public class BoardController {
 			if (multipartFile.getSize() > 0) {
 				switch (index) {
 				case 0:
-					board.setFile_1(UploadUtils.uploadFormPost(multipartFile, uploadPath));
+					board.setFile_1(UploadUtilsExample.uploadFormPost(multipartFile, uploadPath));
 					break;
 				case 1:
-					board.setFile_2(UploadUtils.uploadFormPost(multipartFile, uploadPath));
+					board.setFile_2(UploadUtilsExample.uploadFormPost(multipartFile, uploadPath));
 					break;
 				default:
-					board.setFile_3(UploadUtils.uploadFormPost(multipartFile, uploadPath));
+					board.setFile_3(UploadUtilsExample.uploadFormPost(multipartFile, uploadPath));
 					break;
 				}
 			}
@@ -121,7 +121,7 @@ public class BoardController {
 
 	@PostMapping("/remove")
 	@PreAuthorize("principal.member.userid == #writer")
-	public String remove(@RequestParam("bno") Long bno, Criteria cri, RedirectAttributes rttr, String writer) {
+	public String remove(@RequestParam("bno") Long bno, CriteriaExample cri, RedirectAttributes rttr, String writer) {
 
 		log.info("remove..." + bno);
 		if (service.remove(bno)) {
