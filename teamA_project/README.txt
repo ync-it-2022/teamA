@@ -2,4 +2,4 @@
 
 src/main/resources/global.properties 의 파일 업로드 경로 및 DB 정보 확인 후 수정 필요.
 
-테스트 
+테스트 1
