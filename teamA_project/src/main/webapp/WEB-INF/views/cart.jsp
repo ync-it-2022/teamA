@@ -248,7 +248,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <button type="submit" class="button alt orders_recevied" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">결제</button>
+                        <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">결제</button>
                       </td>
                     </tr>
                   </tfoot>
@@ -265,10 +265,9 @@
   
  <script type="text/javascript">
 	$(document).ready(function (e) {
-		$(".orders_recevied").on("click", function() {
+		$("#place_order").on("click", function(e) {
 			e.preventDefault();
-			/* self.location = "/orders/received"; */
-			alert('hi');
+			self.location = "/orders/received";
 		})
 	
 	});

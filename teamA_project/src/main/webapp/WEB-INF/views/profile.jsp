@@ -11,19 +11,19 @@
               <nav class="rlr-sidebar-menu">
                 <ul class="rlr-sidebar-menu__desktop">
                   <li>
-                    <a class="rlr-sidebar-menu__link active profile" href="#">
+                    <a href="" class="rlr-sidebar-menu__link active profile" >
                       <span class="rlr-sidebar-menu__link-icon"><i class="rlr-icon-font flaticon-carbon-user"> </i></span>
                       프로필
                     </a>
                   </li>
                   <li>
-                    <a class="rlr-sidebar-menu__link orders" href="#">
+                    <a href="" class="rlr-sidebar-menu__link orders" >
                       <span class="rlr-sidebar-menu__link-icon"><i class="rlr-icon-font flaticon-carbon-money"> </i></span>
                       구매목록
                     </a>
                   </li>
                   <li>
-                    <a class="rlr-sidebar-menu__link inquiry" href="#">
+                    <a href="" class="rlr-sidebar-menu__link inquiry" >
                       <span class="rlr-sidebar-menu__link-icon"><i class="rlr-icon-font flaticon-carbon-box"> </i></span>
                       1대1문의
                     </a>

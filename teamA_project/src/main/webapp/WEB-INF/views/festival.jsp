@@ -36,7 +36,7 @@
                   <img class="rlr-postcard__thumbnail" src="/resources/assets/images/Blog/blog-listing01.jpg" alt="test" />
                   <div class="rlr-postcard__summary">
                     <span class="rlr-postcard__author">Sanjeev Jha | 19 Jan 2022</span>
-                    <a href="#" class="rlr-product-card__anchor-title festival_detail">
+                    <a href="" class="rlr-product-card__anchor-title festival_detail">
                       <h2 class="rlr-product-card__title">MT. Everest trekking theme</h2>
                     </a>
                     <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
@@ -56,7 +56,7 @@
             <nav class="rlr-pagination" aria-label="Product list navigation">
               <ul class="pagination rlr-pagination__list">
                 <li class="page-item rlr-pagination__page-item disabled">
-                  <a class="page-link rlr-pagination__page-link rlr-pagination__page-link--prev" href="#" aria-label="Previous">
+                  <a href="" class="page-link rlr-pagination__page-link rlr-pagination__page-link--prev" aria-label="Previous">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15.833 10H4.167m0 0L10 15.833M4.167 10 10 4.167" stroke="var(--body-color)" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
@@ -75,7 +75,7 @@
                   </ul>
                 </li>
                 <li class="page-item rlr-pagination__page-item">
-                  <a class="page-link rlr-pagination__page-link rlr-pagination__page-link--next" href="#" aria-label="Next">
+                  <a href="" class="page-link rlr-pagination__page-link rlr-pagination__page-link--next" aria-label="Next">
                     <span aria-hidden="true">Next</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M4.167 10h11.666m0 0L10 4.167M15.833 10 10 15.833" stroke="var(--body-color)" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
@@ -91,7 +91,8 @@
   
  <script type="text/javascript">
 	$(document).ready(function () {
-	    $(".festival_detail").on("click", function () {
+	    $(".festival_detail").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/enjoy/festival/detail";
 	    });
 	});

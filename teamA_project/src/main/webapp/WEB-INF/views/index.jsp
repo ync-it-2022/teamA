@@ -42,7 +42,7 @@
                 <div class="navigation-body-header rlr-navigation__body-header">
                   <div class="navigation-brand-text">
                     <div class="rlr-logo rlr-logo__navbar-brand">
-                      <a href="#" class="index">
+                      <a href="" class="index">
                         <img src="/resources/assets/svg/tabitabi-logo.png" alt="#"/>
                       </a>
                     </div>
@@ -52,39 +52,39 @@
                 <!-- Main menu -->
                 <ul class="navigation-menu rlr-navigation__menu rlr-navigation__menu--main-links">
                   <li class="navigation-item">
-                    <a class="navigation-link flight" href="#">항공편</a>
+                    <a href="" class="navigation-link flight">항공편</a>
                   </li>
                   <li class="navigation-item">
-                    <a class="navigation-link hotels" href="#">숙박편</a>
+                    <a href="" class="navigation-link hotels">숙박편</a>
                   </li>
                   <li class="navigation-item">
-                    <a class="navigation-link" href="#">즐길거리</a>
+                    <a href="" class="navigation-link">즐길거리</a>
                     <ul class="navigation-dropdown">
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link trstspot" href="#">관광지</a>
+                        <a href="" class="navigation-dropdown-link trstspot">관광지</a>
                       </li>
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link festival" href="#">축제</a>
+                        <a href="" class="navigation-dropdown-link festival">축제</a>
                       </li>
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link activity" href="#">액티비티</a>
+                        <a href="" class="navigation-dropdown-link activity">액티비티</a>
                       </li>
                     </ul>
                   </li>
                   <li class="navigation-item">
-                    <a class="navigation-link" href="#">고객센터</a>
+                    <a href="" class="navigation-link">고객센터</a>
                     <ul class="navigation-dropdown">
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link notice" href="#">공지사항</a>
+                        <a href="" class="navigation-dropdown-link notice">공지사항</a>
                       </li>
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link faq" href="#">FAQ</a>
+                        <a href="" class="navigation-dropdown-link faq">FAQ</a>
                       </li>
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link inquiry" href="#">1대1문의</a>
+                        <a href="" class="navigation-dropdown-link inquiry">1대1문의</a>
                       </li>
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link about" href="#">프로젝트에 대해</a>
+                        <a href="" class="navigation-dropdown-link about">프로젝트에 대해</a>
                       </li>
                     </ul>
                   </li>
@@ -93,16 +93,16 @@
                 <ul class="navigation-menu rlr-navigation__menu align-to-right">
                   <!-- User account dropdown -->
                   <li class="navigation-item">
-                    <a class="navigation-link" href="#"> Sarah J <img class="ui right spaced avatar image" src="/resources/assets/images/blog-single-avatar.png" alt="account avatar" /> </a>
+                    <a href="#" class="navigation-link"> Sarah J <img class="ui right spaced avatar image" src="/resources/assets/images/blog-single-avatar.png" alt="account avatar" /> </a>
                     <ul class="navigation-dropdown">
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link profile" href="#">프로필</a>
+                        <a href="" class="navigation-dropdown-link profile">프로필</a>
                       </li>
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link cart" href="#">장바구니</a>
+                        <a href="" class="navigation-dropdown-link cart">장바구니</a>
                       </li>
                       <li class="navigation-dropdown-item">
-                        <a class="navigation-dropdown-link orders" href="#">구매목록</a>
+                        <a href="" class="navigation-dropdown-link orders">구매목록</a>
                       </li>
                       <li class="navigation-dropdown-item">
                         <hr class="dropdown-divider rlr-dropdown__divider" />
@@ -163,7 +163,7 @@
     <div class="rlr-masonary-grid__container">
       <div class="rlr-masonary-grid__one">
         <!-- Destination card -->
-        <a class="rlr-destination-card trstspot_detail" href="#">
+        <a href="" class="rlr-destination-card trstspot_detail">
           <img src="/resources/assets/images/destination-01.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">나라</h2>
@@ -172,7 +172,7 @@
       </div>
       <div class="rlr-masonary-grid__two">
         <!-- Destination card -->
-        <a class="rlr-destination-card trstspot_detail" href="#">
+        <a href="" class="rlr-destination-card trstspot_detail">
           <img src="/resources/assets/images/destination-02.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">나라</h2>
@@ -181,7 +181,7 @@
       </div>
       <div class="rlr-masonary-grid__three">
         <!-- Destination card -->
-        <a class="rlr-destination-card trstspot_detail" href="#">
+        <a href="" class="rlr-destination-card trstspot_detail">
           <img src="/resources/assets/images/destination-03.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">나라</h2>
@@ -190,7 +190,7 @@
       </div>
       <div class="rlr-masonary-grid__four">
         <!-- Destination card -->
-        <a class="rlr-destination-card trstspot_detail" href="#">
+        <a href="" class="rlr-destination-card trstspot_detail">
           <img src="/resources/assets/images/destination-04.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">London</h2>
@@ -199,7 +199,7 @@
       </div>
       <div class="rlr-masonary-grid__five">
         <!-- Destination card -->
-        <a class="rlr-destination-card trstspot_detail" href="#">
+        <a href="" class="rlr-destination-card trstspot_detail">
           <img src="/resources/assets/images/destination-05.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Paris</h2>
@@ -208,7 +208,7 @@
       </div>
       <div class="rlr-masonary-grid__six">
         <!-- Destination card -->
-        <a class="rlr-destination-card trstspot_detail" href="#">
+        <a href="" class="rlr-destination-card trstspot_detail">
           <img src="/resources/assets/images/destination-06.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Amsterdam</h2>
@@ -228,7 +228,7 @@
     <div class="rlr-masonary-grid__container">
       <div class="rlr-masonary-grid__one">
         <!-- Destination card -->
-        <a class="rlr-destination-card festival_detail" href="#">
+        <a href="" class="rlr-destination-card festival_detail">
           <img src="/resources/assets/images/destination-01.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">축제 이름</h2>
@@ -237,7 +237,7 @@
       </div>
       <div class="rlr-masonary-grid__two">
         <!-- Destination card -->
-        <a class="rlr-destination-card festival_detail" href="#">
+        <a href="" class="rlr-destination-card festival_detail">
           <img src="/resources/assets/images/destination-02.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Zurich</h2>
@@ -246,7 +246,7 @@
       </div>
       <div class="rlr-masonary-grid__three">
         <!-- Destination card -->
-        <a class="rlr-destination-card festival_detail" href="#">
+        <a href="" class="rlr-destination-card festival_detail">
           <img src="/resources/assets/images/destination-03.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Greece</h2>
@@ -255,7 +255,7 @@
       </div>
       <div class="rlr-masonary-grid__four">
         <!-- Destination card -->
-        <a class="rlr-destination-card festival_detail" href="#">
+        <a href="" class="rlr-destination-card festival_detail">
           <img src="/resources/assets/images/destination-04.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">London</h2>
@@ -264,7 +264,7 @@
       </div>
       <div class="rlr-masonary-grid__five">
         <!-- Destination card -->
-        <a class="rlr-destination-card festival_detail" href="#">
+        <a href="" class="rlr-destination-card festival_detail">
           <img src="/resources/assets/images/destination-05.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Paris</h2>
@@ -273,7 +273,7 @@
       </div>
       <div class="rlr-masonary-grid__six">
         <!-- Destination card -->
-        <a class="rlr-destination-card festival_detail" href="#">
+        <a href="" class="rlr-destination-card festival_detail">
           <img src="/resources/assets/images/destination-06.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Amsterdam</h2>
@@ -293,7 +293,7 @@
     <div class="rlr-masonary-grid__container">
       <div class="rlr-masonary-grid__one">
         <!-- Destination card -->
-        <a class="rlr-destination-card activity_detail" href="#">
+        <a href="" class="rlr-destination-card activity_detail">
           <img src="/resources/assets/images/destination-01.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">액티비티 이름</h2>
@@ -302,7 +302,7 @@
       </div>
       <div class="rlr-masonary-grid__two">
         <!-- Destination card -->
-        <a class="rlr-destination-card activity_detail" href="#">
+        <a href="" class="rlr-destination-card activity_detail">
           <img src="/resources/assets/images/destination-02.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Zurich</h2>
@@ -311,7 +311,7 @@
       </div>
       <div class="rlr-masonary-grid__three">
         <!-- Destination card -->
-        <a class="rlr-destination-card activity_detail" href="#">
+        <a href="" class="rlr-destination-card activity_detail">
           <img src="/resources/assets/images/destination-03.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Greece</h2>
@@ -320,7 +320,7 @@
       </div>
       <div class="rlr-masonary-grid__four">
         <!-- Destination card -->
-        <a class="rlr-destination-card activity_detail" href="#">
+        <a href="" class="rlr-destination-card activity_detail">
           <img src="/resources/assets/images/destination-04.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">London</h2>
@@ -329,7 +329,7 @@
       </div>
       <div class="rlr-masonary-grid__five">
         <!-- Destination card -->
-        <a class="rlr-destination-card activity_detail" href="#">
+        <a href="" class="rlr-destination-card activity_detail">
           <img src="/resources/assets/images/destination-05.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Paris</h2>
@@ -338,7 +338,7 @@
       </div>
       <div class="rlr-masonary-grid__six">
         <!-- Destination card -->
-        <a class="rlr-destination-card activity_detail" href="#">
+        <a href="" class="rlr-destination-card activity_detail">
           <img src="/resources/assets/images/destination-06.jpg" class="rlr-destination-card__img" alt="..." />
           <div class="rlr-destination-card__info rlr-destination-card__info--left rlr-destination-card__info--bottom">
             <h2 class="rlr-destination-card__info--main">Amsterdam</h2>
@@ -351,67 +351,83 @@
 
 <script type="text/javascript">
 	$(document).ready(function () {
-		$(".index").on("click", function() {
+		$(".index").on("click", function(e) {
+            e.preventDefault();
 			self.location = "/";
 		})
 		
-	    $(".flight").on("click", function () {
+	    $(".flight").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/flight";
 	    });
 
-		$(".hotels").on("click", function () {
+		$(".hotels").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/hotels";
 		});
 		
-		$(".trstspot").on("click", function() {
+		$(".trstspot").on("click", function(e) {
+            e.preventDefault();
 			self.location = "/enjoy/trstspot";
 		})
 		
-	    $(".festival").on("click", function () {
+	    $(".festival").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/enjoy/festival";
 	    });
 
-		$(".activity").on("click", function () {
+		$(".activity").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/enjoy/activity";
 		});
 		
-		$(".notice").on("click", function () {
+		$(".notice").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/notice";
 		});
 		
-		$(".faq").on("click", function () {
+		$(".faq").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/faq";
 		});
 		
-		$(".inquiry").on("click", function () {
+		$(".inquiry").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/inquiry";
 		});
 		
-		$(".about").on("click", function () {
+		$(".about").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/about";
 		});
 		
-		$(".profile").on("click", function () {
-			self.location = "member/profile";
+		$(".profile").on("click", function (e) {
+            e.preventDefault();
+			self.location = "/member/profile";
 		});
 		
-		$(".cart").on("click", function () {
-			self.location = "orders/cart";
+		$(".cart").on("click", function (e) {
+            e.preventDefault();
+			self.location = "/orders/cart";
 		});
 		
-		$(".orders").on("click", function () {
+		$(".orders").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/orders";
 		});
 		
-		$(".trstspot_detail").on("click", function() {
+		$(".trstspot_detail").on("click", function(e) {
+            e.preventDefault();
 			self.location = "/enjoy/trstspot/detail";
 		})
 		
-	    $(".festival_detail").on("click", function () {
+	    $(".festival_detail").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/enjoy/festival/detail";
 	    });
 
-		$(".activity_detail").on("click", function () {
+		$(".activity_detail").on("click", function (e) {
+            e.preventDefault();
 			self.location = "/enjoy/activity/detail";
 		});
 	});

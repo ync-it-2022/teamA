@@ -57,7 +57,7 @@
                             <time datetime="2022-04-20T08:01:42+00:00"> April 20, 2022 </time>
                           </td>
                             <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
-                              <a href="#" class="notice_detail">
+                              <a href="" class="notice_detail">
                                 카드오류에 관한 안내
                               </a>
                             </td>
@@ -79,7 +79,7 @@
                             <time datetime="2022-04-20T08:01:42+00:00"> April 20, 2022 </time>
                           </td>
                           <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
-                            <a href="#" class="notice_detail">
+                            <a href="" class="notice_detail">
                               환불액 지급 일자
                             </a>
                           </td>
@@ -101,7 +101,7 @@
                             <time datetime="2022-04-20T08:01:42+00:00"> April 20, 2022 </time>
                           </td>
                           <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
-                            <a href="#" class="notice_detail">
+                            <a href="" class="notice_detail">
                               결제 수단 안내
                             </a>
                           </td>
@@ -123,7 +123,7 @@
                             <time datetime="2022-04-20T08:01:42+00:00"> April 20, 2022 </time>
                           </td>
                           <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
-                            <a href="#" class="notice_detail">
+                            <a href="" class="notice_detail">
                               예약자 변경
                             </a>
                           </td>
@@ -151,7 +151,8 @@
   
  <script type="text/javascript">
 	$(document).ready(function () {
-	    $(".notice_detail").on("click", function () {
+	    $(".notice_detail").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/notice/detail";
 	    });
 	});

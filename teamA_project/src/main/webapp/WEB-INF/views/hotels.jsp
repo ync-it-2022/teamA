@@ -169,7 +169,7 @@
                   <!-- Product card header -->
                   <header class="rlr-product-card__header">
                     <div>
-                      <a href="#" class="rlr-product-card__anchor-title hotels_detail">
+                      <a href="" class="rlr-product-card__anchor-title hotels_detail">
                         <h2 class="rlr-product-card__title" itemprop="name">호텔이름</h2>
                       </a>
                     </div>
@@ -189,7 +189,7 @@
                   </div>
                 </div>
                 <!-- Product card link -->
-                <a href="#" class="rlr-product-card__anchor hotels_detail"></a>
+                <a href="" class="rlr-product-card__anchor hotels_detail"></a>
               </article>
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-offset="300" data-aos-duration="350">
@@ -201,7 +201,7 @@
                   <!-- Product card header -->
                   <header class="rlr-product-card__header">
                     <div>
-                      <a href="#" class="rlr-product-card__anchor-title hotels_detail">
+                      <a href="" class="rlr-product-card__anchor-title hotels_detail">
                         <h2 class="rlr-product-card__title" itemprop="name">호텔이름</h2>
                       </a>
                     </div>
@@ -328,7 +328,8 @@
   
  <script type="text/javascript">
 	$(document).ready(function () {
-	    $(".hotels_detail").on("click", function () {
+	    $(".hotels_detail").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/hotels/detail";
 	    });
 	});

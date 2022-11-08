@@ -11,19 +11,19 @@
               <nav class="rlr-sidebar-menu">
                 <ul class="rlr-sidebar-menu__desktop">
                   <li>
-                    <a class="rlr-sidebar-menu__link profile" href="#">
+                    <a href="" class="rlr-sidebar-menu__link profile">
                       <span class="rlr-sidebar-menu__link-icon"><i class="rlr-icon-font flaticon-carbon-user"> </i></span>
                       프로필
                     </a>
                   </li>
                   <li>
-                    <a class="rlr-sidebar-menu__link orders" href="#">
+                    <a href="" class="rlr-sidebar-menu__link orders">
                       <span class="rlr-sidebar-menu__link-icon"><i class="rlr-icon-font flaticon-carbon-money"> </i></span>
                       구매목록
                     </a>
                   </li>
                   <li>
-                    <a class="rlr-sidebar-menu__link active inquiry" href="#">
+                    <a href="" class="rlr-sidebar-menu__link active inquiry">
                       <span class="rlr-sidebar-menu__link-icon"><i class="rlr-icon-font flaticon-carbon-box"> </i></span>
                       1대1문의
                     </a>
@@ -66,7 +66,7 @@
                       </td>
                       <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">결제</td>
                       <td class="rlr-data-table__cell rlr-data-table__cell-total woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Total">
-                        <a href="#" class="inquiry_detail">
+                        <a href="" class="inquiry_detail">
                      	  <span class="rlr-data-table__amount woocommerce-Price-amount amount">
                           <span class="woocommerce-Price-currencySymbol"></span>
                           <span>카드오류</span>
@@ -86,7 +86,7 @@
                       </td>
                       <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">환불</td>
                       <td class="rlr-data-table__cell rlr-data-table__cell-total woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Total">
-                      	<a href="#" class="inquiry_detail">
+                      	<a href="" class="inquiry_detail">
                         <span class="rlr-data-table__amount woocommerce-Price-amount amount">
                           <span class="woocommerce-Price-currencySymbol"></span>
                           <span>환불액 입금</span>
@@ -106,7 +106,7 @@
                       </td>
                       <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">결제</td>
                       <td class="rlr-data-table__cell rlr-data-table__cell-total woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Total">
-                      <a href="#" class="inquiry_detail">
+                      <a href="" class="inquiry_detail">
                         <span class="rlr-data-table__amount woocommerce-Price-amount amount">
                           <span class="woocommerce-Price-currencySymbol"></span>
                           <span>결제 수단 문의</span>
@@ -126,7 +126,7 @@
                       </td>
                       <td class="rlr-data-table__cell woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">변경</td>
                       <td class="rlr-data-table__cell rlr-data-table__cell-total woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Total">
-                      <a href="#" class="inquiry_detail">
+                      <a href="" class="inquiry_detail">
                         <span class="rlr-data-table__amount woocommerce-Price-amount amount">
                           <span class="woocommerce-Price-currencySymbol"></span>
                           <span>예약자 변경</span>
@@ -149,7 +149,8 @@
   
  <script type="text/javascript">
 	$(document).ready(function () {
-	    $(".inquiry_detail").on("click", function () {
+	    $(".inquiry_detail").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/inquiry/detail";
 	    });
 	});

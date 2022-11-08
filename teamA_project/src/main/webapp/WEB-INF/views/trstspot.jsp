@@ -34,7 +34,7 @@
                 <img class="rlr-postcard__thumbnail" src="/resources/assets/images/Blog/blog-listing01.jpg" alt="blog image" />
                 <div class="rlr-postcard__summary">
                   <span class="rlr-postcard__author">Sanjeev Jha | 19 Jan 2022</span>
-                  <a href="#" class="rlr-product-card__anchor-title trstspot_detail">
+                  <a href="" class="rlr-product-card__anchor-title trstspot_detail">
                     <h2 class="rlr-product-card__title">MT. Everest trekking theme</h2>
                   </a>
                   <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
@@ -46,7 +46,7 @@
                 <img class="rlr-postcard__thumbnail" src="/resources/assets/images/Blog/blog-listing02.jpg" alt="blog image" />
                 <div class="rlr-postcard__summary">
                   <span class="rlr-postcard__author">Sanjeev Jha | 19 Jan 2022</span>
-                  <a href="#" class="rlr-product-card__anchor-title trstspot_detail">
+                  <a href="" class="rlr-product-card__anchor-title trstspot_detail">
                     <h2 class="rlr-product-card__title">Annapurna himal blog posts</h2>
                   </a>
                   <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
@@ -58,7 +58,7 @@
                 <img class="rlr-postcard__thumbnail" src="/resources/assets/images/Blog/blog-listing03.jpg" alt="blog image" />
                 <div class="rlr-postcard__summary">
                   <span class="rlr-postcard__author">Sanjeev Jha | 19 Jan 2022</span>
-                  <a href="#" class="rlr-product-card__anchor-title trstspot_detail">
+                  <a href="" class="rlr-product-card__anchor-title trstspot_detail">
                     <h2 class="rlr-product-card__title">Best seasons to travel 2022</h2>
                   </a>
                   <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
@@ -105,7 +105,8 @@
   
  <script type="text/javascript">
 	$(document).ready(function () {
-	    $(".trstspot_detail").on("click", function () {
+	    $(".trstspot_detail").on("click", function (e) {
+            e.preventDefault();
 	    	self.location = "/enjoy/trstspot/detail";
 	    });
 	});
