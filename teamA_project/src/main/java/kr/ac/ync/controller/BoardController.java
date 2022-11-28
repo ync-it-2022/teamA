@@ -29,7 +29,7 @@ public class BoardController {
 	private String uploadPath;
 
 	@Autowired
-	private BoardService service;
+	private BoardService service; 
 
 	@GetMapping("/register")
 	@PreAuthorize("isAuthenticated()")
