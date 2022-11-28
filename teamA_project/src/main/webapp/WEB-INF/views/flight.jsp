@@ -69,14 +69,6 @@
         <div class="row rlr-search-results-page__product-details">
           <aside class="col-xl-4 rlr-search-results-page__sidebar">
             <div class="rlr-product-filters__filters-wrapper">
-              <div class="rlr-product-filters__filter row">
-                <div class="col-md-6">
-                  <button type="button" class="btn rlr-button rlr-button--fullwidth rlr-button--primary">편도 조회</button>
-                </div>
-                <div class="col-md-6">
-                  <button type="button" class="btn rlr-button rlr-button--fullwidth rlr-button--primary">왕복 조회</button>
-                </div>
-              </div>
               <!-- Search filter -->
               <div class="rlr-product-filters__filter">
                 <label class="rlr-form-label rlr-form-label-- rlr-product-filters__label"> 출발지 </label>
