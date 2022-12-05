@@ -36,6 +36,11 @@ public class NoticeMapperTests {
 
         noticeMapper.getNoticeList(criteria);
     }
+    
+    @Test
+    public void getNoticeDetailTest() {
+    	noticeMapper.getNoticeDetail(1L);
+    }
 
     @Test
     public void getTotalTest() {

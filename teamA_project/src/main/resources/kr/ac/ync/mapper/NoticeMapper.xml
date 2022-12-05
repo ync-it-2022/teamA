@@ -36,6 +36,19 @@
         WHERE   rn > (#{cri.pageNum} - 1) * #{cri.amount}
         ]]>
     </select>
+    
+    <select id="getNoticeDetail" resultType="kr.ac.ync.domain.NoticeVO">
+    	<![CDATA[
+    	SELECT	notice_idx,
+    			member_idx,
+    			title,
+    			content,
+    			reg_date,
+    			view_count
+		FROM	notice
+		WHERE	notice_idx = #{notice_idx}
+    	]]>
+    </select>
 
     <select id="getTotal" resultType="int">
         SELECT count(*) FROM notice WHERE notice_idx > 0
