@@ -25,4 +25,11 @@ public class NoticeServiceImpl implements  NoticeService {
 	public List<NoticeVO> getNoticeList(Criteria cri) {
 		return mapper.getNoticeList(cri);
 	}
+
+	@Override
+	public NoticeVO getNoticeDetail(Long notice_idx) {
+		return mapper.getNoticeDetail(notice_idx);
+	}
+	
+	
 }

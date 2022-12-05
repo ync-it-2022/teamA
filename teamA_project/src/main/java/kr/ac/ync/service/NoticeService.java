@@ -9,4 +9,6 @@ public interface NoticeService {
     List<NoticeVO> getNoticeList(Criteria cri);
 
     int getTotal();
+    
+    NoticeVO getNoticeDetail(Long notice_idx);
 }
