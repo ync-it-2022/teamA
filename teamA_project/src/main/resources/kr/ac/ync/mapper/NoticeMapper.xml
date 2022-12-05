@@ -18,7 +18,7 @@
                )
     </insert>
 
-    <select id="getNoticeList" resultType="kr.ac.ync.domain.NoticeListVO">
+    <select id="getNoticeList" resultType="kr.ac.ync.domain.NoticeVO">
         <![CDATA[
         SELECT  notice_idx,
                 title,

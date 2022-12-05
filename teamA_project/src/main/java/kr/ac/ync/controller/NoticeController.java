@@ -1,19 +1,14 @@
 package kr.ac.ync.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.ac.ync.domain.Criteria;
 import kr.ac.ync.domain.PageDTO;
 import kr.ac.ync.service.NoticeService;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/notice")
