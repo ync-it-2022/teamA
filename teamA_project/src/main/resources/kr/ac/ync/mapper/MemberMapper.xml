@@ -20,11 +20,18 @@
 
 	<!--
 	member_auth table은 사용 하지 않고 AuthVO만 사용한다.
-	tbl_member 의 autho 컬럼 정보만 따로 담는 객체이다.
+	tbl_member 의 auth 컬럼 정보만 따로 담는 객체이다.
 	Spring Security의 기본 사용법과 다르게 tbl_member에 권한 컴럼(auth)을
 	넣어서 사용하기에 기본 사용법과 달라진다.
 	-->
-	<select id="read" resultMap="memberMap">
+	
+	<insert id="register">
+	INSERT INTO MEMBER (member_idx, userid, userpw, nickname, username, phonenumber, email, address)
+		   VALUES 	   (seq_member_idx.nextval, #{userid}, #{userpw}, #{nickName}, #{userName}, #{phoneNumber}, #{email}, #{address})
+	</insert> 
+	
+	
+<!--<select id="read" resultMap="memberMap">
 	SELECT	userid,
 			userpw,
 			username,
@@ -34,6 +41,6 @@
 			auth
 	FROM	tbl_member
 	WHERE	userid = #{userid} 
-	</select>
+	</select> -->
 
 </mapper>
