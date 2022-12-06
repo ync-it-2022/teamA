@@ -30,6 +30,12 @@
 		   VALUES 	   (seq_member_idx.nextval, #{userid}, #{userpw}, #{nickName}, #{userName}, #{phoneNumber}, #{email}, #{address})
 	</insert> 
 	
+	<select id="login">
+	SELECT 	userid, userpw
+	FROM	member
+	WHERE	userid=#{userid} and userpw=#{userpw}	
+	</select>
+	
 	
 <!--<select id="read" resultMap="memberMap">
 	SELECT	userid,

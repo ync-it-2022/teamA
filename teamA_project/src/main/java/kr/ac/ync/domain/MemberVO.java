@@ -15,12 +15,15 @@ public class MemberVO {
 	private String userpw;
 	private String nickName;
 	private String userName;
-	private String phoneNumber;
+	private String phoneNumber; 
 	private String email;
 	private String address;
 	private boolean enabled;
 	private List<AuthVO> authList;
 	
+	
+	
+	  
 	private Date regDate;
 	private Date updateDate;
 }

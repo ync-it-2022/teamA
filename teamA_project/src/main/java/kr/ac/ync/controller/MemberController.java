@@ -27,7 +27,7 @@ public class MemberController {
 	@PostMapping("/register")
 	public String postRegister(MemberVO vo) {
 		logger.info("post register");
-		
+		   
 		memberservice.register(vo);
 		
 		return "redirect:index.jsp";
