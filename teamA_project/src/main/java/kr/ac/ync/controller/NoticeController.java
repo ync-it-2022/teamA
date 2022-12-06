@@ -1,45 +1,36 @@
 package kr.ac.ync.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.ac.ync.domain.Criteria;
+import kr.ac.ync.domain.PageDTO;
+import kr.ac.ync.service.NoticeService;
+import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequestMapping("/notice")
+@RequiredArgsConstructor
 public class NoticeController {
-	private static final Logger logger = LoggerFactory.getLogger(NoticeController.class);
-	
+
+	private final NoticeService service;
+
 	@GetMapping(value = {"/", ""})
-	public String notice(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "notice";
+	public void notice(Model model, Criteria cri) {
+
+		int total = service.getTotal();
+		model.addAttribute("list", service.getNoticeList(cri));
+		model.addAttribute("pageMaker", new PageDTO(cri, total));
 	}
 	
 	@GetMapping(value = "/detail")
-	public String noticeDetail(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String noticeDetail(Model model, Long notice_idx, @ModelAttribute("cri")Criteria cri) {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+		model.addAttribute("notice", service.getNoticeDetail(notice_idx));
 		
 		return "notice_detail";
 	}

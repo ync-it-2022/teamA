@@ -77,6 +77,10 @@ target/
 # Spring Boot Tooling
 .sts4-cache/
 
+### IDEA ###
+.idea/
+controller.iml
+
 ### Java ###
 # Compiled class file
 *.class
