@@ -3,6 +3,8 @@ package kr.ac.ync.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.ac.ync.domain.Criteria;
@@ -23,12 +25,13 @@ public class NoticeController {
 		int total = service.getTotal();
 		model.addAttribute("list", service.getNoticeList(cri));
 		model.addAttribute("pageMaker", new PageDTO(cri, total));
-
-		System.out.println(new PageDTO(cri, total));
 	}
 	
 	@GetMapping(value = "/detail")
-	public String noticeDetail(Model model) {
+	public String noticeDetail(Model model, Long notice_idx, @ModelAttribute("cri")Criteria cri) {
+		
+		model.addAttribute("notice", service.getNoticeDetail(notice_idx));
+		
 		return "notice_detail";
 	}
 }
