@@ -53,11 +53,12 @@ pageEncoding="UTF-8"%> <%@include file="./includes/header.jsp"%>
 <script type="text/javascript">
   let operForm = $("#operForm");
 
-  $("button[data-oper='list']").on("click", function (e) {
-    console.log("hi");
-    operForm.find("#notice_idx").remove();
-    operForm.attr("action", "/notice");
-    operForm.submit();
+  $(document).ready(function() {
+	  $("button[data-oper='list']").on("click", function (e) {
+		    operForm.find("#notice_idx").remove();
+		    operForm.attr("action", "/notice");
+		    operForm.submit();
+	  });  
   });
 </script>
 <%@include file="./includes/footer.jsp"%>
