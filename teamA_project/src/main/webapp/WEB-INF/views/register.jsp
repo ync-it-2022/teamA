@@ -103,7 +103,7 @@ pageEncoding="UTF-8"%>
                         type="password"
                         autocomplete="off"
                         class="form-control form-control--light"
-                        name="userpassword"
+                        name="userpw"
                       />
                       <p class="help-text">Must be 8 characters or more.</p>
                     </div>
@@ -117,7 +117,7 @@ pageEncoding="UTF-8"%>
                         type="password"
                         autocomplete="off"
                         class="form-control form-control--light"
-                        name="userpasswordcheck"
+                        name="userpwcheck"
                       />
                     </div>
                     <div class="rlr-authforms__inputgroup">
@@ -169,7 +169,7 @@ pageEncoding="UTF-8"%>
                         type="eamil"
                         autocomplete="off"
                         class="form-control form-control--light"
-                        name="eamil"
+                        name="email"
                       />
                     </div>
                     <div class="rlr-authforms__inputgroup">
@@ -214,7 +214,7 @@ pageEncoding="UTF-8"%>
       $(document).ready(function() {
     	  $("button[data-oper='register']").on("click", function (e) {
    	        e.preventDefault();
-   	        registerForm.find("[name='userpasswordcheck']").remove();
+   	        registerForm.find("[name='userpwcheck']").remove();
    	        registerForm.attr("action", "/member/register");
    	        registerForm.submit();
    	      });

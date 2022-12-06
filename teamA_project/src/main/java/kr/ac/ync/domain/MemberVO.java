@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class MemberVO {
 
-	private long memberidx;
+	private long member_idx;
 	private String userid;
 	private String userpw;
 	private String nickname;
@@ -18,9 +18,6 @@ public class MemberVO {
 	private String phonenumber; 
 	private String email;
 	private String address;
-	private boolean enabled;
-	private List<AuthVO> authlist;
-	  
-	private Date regdate;
-	private Date updatedate;
+	private List<String> auth;
+	private Date reg_date;
 }

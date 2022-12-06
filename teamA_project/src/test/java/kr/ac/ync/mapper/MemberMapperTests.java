@@ -36,24 +36,16 @@ public class MemberMapperTests {
 	@Test
 	public void testRegister() {
 		
-		AuthVO authvo = new AuthVO();
 		MemberVO member = new MemberVO();
-		List<AuthVO> auth = new ArrayList<>();
 		
-		authvo.setUserid("def1234");
-		authvo.setAuth("ADMIN");
+		member.setUserid("whynot2");
+		member.setUserpw("8888");
+		member.setNickname("Jeball");
+		member.setUsername("Jebalyong");
+		member.setPhonenumber("010-7774-9999");
+		member.setEmail("Jebal@naver.com");
+		member.setAddress("Osaka");
 		
-		auth.add(authvo);
-		
-		member.setUserid("xorb6482");
-		member.setUserpw("6472");
-		member.setNickname("Kang");
-		member.setUsername("Kang TaeGyu");
-		member.setPhonenumber("010-4248-8845");
-		member.setEmail("Kang@gmail.com");
-		member.setAddress("Daegu");
-		member.setEnabled(true);
-		member.setAuthlist(auth);
 
 		mapper.register(member);	
 	}
