@@ -47,9 +47,9 @@ public class MemberMapperTests {
 		
 		member.setUserid("xorb6482");
 		member.setUserpw("6472");
-		member.setNickName("Kang");
-		member.setUserName("Kang TaeGyu");
-		member.setPhoneNumber("010-4248-8845");
+		member.setNickname("Kang");
+		member.setUsername("Kang TaeGyu");
+		member.setPhonenumber("010-4248-8845");
 		member.setEmail("Kang@gmail.com");
 		member.setAddress("Daegu");
 		member.setEnabled(true);

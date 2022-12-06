@@ -11,25 +11,24 @@ import kr.ac.ync.domain.MemberVO;
 import kr.ac.ync.service.MemberService;
 
 @Controller
-@RequestMapping("/member/*")
+@RequestMapping("/member")
 public class MemberController {
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 	
 	MemberService memberservice;
 	
-	//회원가입 get
 	@GetMapping("/register")
-	public void getRegister() {
-		logger.info("get register");
+	public String register() {
+		return "register";
 	}
 	
 	//회원가입 post
 	@PostMapping("/register")
-	public String postRegister(MemberVO vo) {
+	public String register(MemberVO vo) {
 		logger.info("post register");
 		
 		memberservice.register(vo);
 		
-		return "redirect:index.jsp";
+		return "redirect:/";
 	}
 }
