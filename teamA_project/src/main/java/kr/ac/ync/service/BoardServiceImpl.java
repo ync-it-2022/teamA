@@ -8,11 +8,12 @@ import kr.ac.ync.domain.BoardVO;
 import kr.ac.ync.domain.Criteria;
 import kr.ac.ync.mapper.BoardMapper;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BoardServiceImpl implements BoardService {
 
 	// @Setter(onMethod_ = @Autowired)
