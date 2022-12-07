@@ -30,6 +30,16 @@ public class NoticeServiceImpl implements  NoticeService {
 	public NoticeVO getNoticeDetail(Long notice_idx) {
 		return mapper.getNoticeDetail(notice_idx);
 	}
+
+	@Override
+	public List<NoticeVO> getNoticeAllList() {
+		return mapper.getNoticeAllList();
+	}
+
+	@Override
+	public int updateViewCount(Long notice_idx) {
+		return mapper.updateViewCount(notice_idx);
+	}
 	
 	
 }

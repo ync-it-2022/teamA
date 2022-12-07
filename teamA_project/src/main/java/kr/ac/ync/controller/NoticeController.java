@@ -1,5 +1,6 @@
 package kr.ac.ync.controller;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +32,23 @@ public class NoticeController {
 	public String noticeDetail(Model model, Long notice_idx, @ModelAttribute("cri")Criteria cri) {
 		
 		model.addAttribute("notice", service.getNoticeDetail(notice_idx));
+		service.updateViewCount(notice_idx);
 		
 		return "notice_detail";
+	}
+	
+	@GetMapping(value = "/management")
+	public String adminNotice(Model model) {
+		
+		model.addAttribute("list", service.getNoticeAllList());
+		return "admin/controll_notice";
+	}
+	
+	@GetMapping(value = "/management/{notice_idx}")
+	public String adminNoticeModify(Model model, @PathVariable("notice_idx") Long notice_idx) {
+		
+		model.addAttribute("notice", service.getNoticeDetail(notice_idx));
+		
+		return "admin/controll_notice_modify";
 	}
 }

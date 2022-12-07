@@ -7,8 +7,12 @@ import kr.ac.ync.domain.NoticeVO;
 
 public interface NoticeService {
     List<NoticeVO> getNoticeList(Criteria cri);
+    
+    List<NoticeVO> getNoticeAllList();
 
     int getTotal();
     
     NoticeVO getNoticeDetail(Long notice_idx);
+    
+    int updateViewCount(Long notice_idx);
 }

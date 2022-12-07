@@ -11,7 +11,11 @@ public interface NoticeMapper {
 
     public List<NoticeVO> getNoticeList(@Param("cri")Criteria cri);
     
+    public List<NoticeVO> getNoticeAllList();
+    
     public NoticeVO getNoticeDetail(Long notice_idx);
+    
+    public int updateViewCount(Long notice_idx);
 
     public int createNotice(NoticeVO notice);
 
