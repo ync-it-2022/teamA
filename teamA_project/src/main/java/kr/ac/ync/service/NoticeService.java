@@ -6,6 +6,9 @@ import kr.ac.ync.domain.Criteria;
 import kr.ac.ync.domain.NoticeVO;
 
 public interface NoticeService {
+	
+	int createNotice(NoticeVO notice);
+	
     List<NoticeVO> getNoticeList(Criteria cri);
     
     List<NoticeVO> getNoticeAllList();

@@ -34,7 +34,7 @@
                       name="content"
                     ><c:out value="${notice.content}"/></textarea>
                   </div>
-                  <button type="submit" data-oper='modify' class="btn btn-primary">Modify</button>
+                  <button type="submit" data-oper='modify' class="btn btn-success">Modify</button>
                   <button type="submit" data-oper='remove' class="btn btn-danger">Remove</button>
                   </div>
                 </div>

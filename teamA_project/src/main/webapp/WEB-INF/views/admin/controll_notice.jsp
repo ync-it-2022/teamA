@@ -42,6 +42,9 @@
                         </c:forEach>
                   </tbody>
                 </table>
+				<button class="btn btn-primary create">
+					New Notice
+				</button>
               </div>
             </div>
           </div>
@@ -49,4 +52,11 @@
       </div>
     </div>
     
+        
+   <script type="text/javascript">
+	   $(".create").on("click", function (e) {
+	       e.preventDefault();
+			self.location = "/notice/create";
+		});
+   </script>
 <%@include file="../includes/controll_footer.jsp"%>
