@@ -40,27 +40,4 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
-	
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
-	
-	@PostMapping("/login")
-	public String login(HttpServletRequest request, 
-			MemberVO vo, RedirectAttributes rttr) {
-	
-		HttpSession session = request.getSession();
-		MemberVO lvo = memberservice.login(vo);
-		
-		if(lvo == null) {						//일치하지 않는 아이디, 비밀번호 입력시
-			int result = 0;
-			rttr.addFlashAttribute("result", result);
-			return "redirect:/member/login";
-		}
-		
-		session.setAttribute("member", lvo);	//일치하는 아이디 비밀번호 입력시
-		
-		return "redirect:/";
-	}
 }

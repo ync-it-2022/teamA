@@ -60,7 +60,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 offset-lg-4">
-						<form class="rlr-authforms" action="/member/login" method="POST"
+						<form class="rlr-authforms" action="/login" method="post"
 							id="loginform">
 							<div class="rlr-authforms__header">
 								<h2>Log in to your emprise</h2>
@@ -95,6 +95,7 @@
 									Don’t have an account? <a href="./signup.html">Sign up</a>
 								</p>
 							</div>
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						</form>
 					</div>
 				</div>
@@ -111,7 +112,7 @@
 				e.preventDefault();
 				alert("로그인 버튼 작동함");
 				/* 로그인 메서드 서버 요청 */
-				$("#loginform").attr("action", "/member/login");
+				$("#loginform").attr("action", "/login");
 				$("#loginform").submit();
 			});
 			

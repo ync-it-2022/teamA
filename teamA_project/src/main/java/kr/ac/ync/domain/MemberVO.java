@@ -18,6 +18,6 @@ public class MemberVO {
 	private String phonenumber; 
 	private String email;
 	private String address;
-	private List<String> auth;
+	private List<AuthVO> authList;
 	private Date reg_date;
 }
