@@ -54,9 +54,11 @@
     
         
    <script type="text/javascript">
-	   $(".create").on("click", function (e) {
-	       e.preventDefault();
-			self.location = "/notice/create";
-		});
+	   $(document).ready(function () {
+		   $(".create").on("click", function (e) {
+		       e.preventDefault();
+				self.location = "/notice/create";
+			});
+	   });
    </script>
 <%@include file="../includes/controll_footer.jsp"%>

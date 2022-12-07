@@ -13,7 +13,7 @@
                 공지사항 목록
               </div>
               	<div class="card-body">
-					<form action='/notice/create' method='post'>
+					<form id='createForm' action='/notice/create' method='post'>
   						<div class="form-group">
 							<div class="form-group">
 								<label>제목</label>
@@ -27,7 +27,7 @@
 								name="content"
 								></textarea>
 							</div>
-							<button type="submit" class="btn btn-primary">Create</button>
+							<button id="create" type="submit" class="btn btn-primary">Create</button>
 							</div>
 						</div>
 					</form>
@@ -37,4 +37,25 @@
         </main>
       </div>
     </div>
+    
+    <script type="text/javascript">
+		let createForm = $('#createForm');
+
+    	$(document).ready(function() {
+    		$("#createForm #create").on("click", function(e) {
+    			e.preventDefault();
+
+				if(!createForm.find("input[name='title']").val()) {
+					alert("제목을 입력해주세요");
+					return false;
+				}
+				if(!createForm.find("textarea[name='content']").val()) {
+					alert("내용을 입력해주세요");
+					return false;
+				}
+				
+				createForm.submit();
+    		});
+    	});
+    </script>
 <%@include file="../includes/controll_footer.jsp"%>
