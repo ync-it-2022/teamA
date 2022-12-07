@@ -3,6 +3,8 @@ package kr.ac.ync.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +29,8 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public void login(MemberVO memberVO) {
-		// TODO Auto-generated method stub
+	public MemberVO login(MemberVO memberVO) {
+		return mapper.login(memberVO);
 	}
+
 }

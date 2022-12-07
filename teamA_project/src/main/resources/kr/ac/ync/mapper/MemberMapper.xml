@@ -3,17 +3,42 @@
 <mapper namespace="kr.ac.ync.mapper.MemberMapper">
 	
 	<insert id="register">
-	INSERT INTO MEMBER (member_idx, userid, 
-						userpw, nickname, username, phonenumber, email, address, reg_date, auth, enabled)
-		   VALUES 	   (seq_member_idx.nextval, #{userid}, 
-		   				#{userpw}, #{nickname}, #{username}, #{phonenumber}, #{email}, #{address}, 
-						SYSDATE, 'ADMIN', '0')
+		INSERT INTO MEMBER (member_idx, 
+							userid, 
+							userpw, 
+							nickname, 
+							username, 
+							phonenumber, 
+							email, address, 
+							reg_date, 
+							auth, 
+							enabled)
+		   			VALUES 	(seq_member_idx.nextval, 
+		   					#{userid}, 
+		   					#{userpw}, 
+		   					#{nickname}, 
+		   					#{username}, 
+		   					#{phonenumber}, 
+		   					#{email}, 
+		   					#{address}, 
+							SYSDATE, 
+							'USER', 
+							'0')
 	</insert> 
 	
-	<select id="login">
-	SELECT 	userid, userpw
-	FROM	member
-	WHERE	userid=#{userid} and userpw=#{userpw}	
+	<select id="login" resultType="kr.ac.ync.domain.MemberVO">
+		SELECT 	member_idx, 
+				userid, 
+				userpw, 
+				nickname, 
+				username, 
+				phonenumber, 
+				email, address, 
+				reg_date, 
+				auth, 
+				enabled
+		FROM	MEMBER
+		WHERE	userid=#{userid} AND userpw=#{userpw}	
 	</select>
 
 </mapper>

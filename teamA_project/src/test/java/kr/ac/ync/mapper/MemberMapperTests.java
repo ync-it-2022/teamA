@@ -21,32 +21,33 @@ public class MemberMapperTests {
 
 	@Setter(onMethod_ = @Autowired)
 	private MemberMapper mapper;
-
-//	@Test
-//	public void testRead() {
-//
-//		MemberVO vo = mapper.read("admin90");
-//
-//		log.info(vo);
-//		
-//		vo.getAuthList().forEach(authVO -> log.info(authVO));
-//
-//	}
 	
 	@Test
 	public void testRegister() {
 		
 		MemberVO member = new MemberVO();
 		
-		member.setUserid("whynot2");
-		member.setUserpw("8888");
-		member.setNickname("Jeball");
-		member.setUsername("Jebalyong");
-		member.setPhonenumber("010-7774-9999");
-		member.setEmail("Jebal@naver.com");
-		member.setAddress("Osaka");
+		member.setUserid("kang");
+		member.setUserpw("9999");
+		member.setNickname("sibul");
+		member.setUsername("ek");
+		member.setPhonenumber("010-7787-9777");
+		member.setEmail("sibul@naver.com");
+		member.setAddress("Kyoto");
 		
 
 		mapper.register(member);	
+	}
+	
+	@Test
+	public void testLogin() {
+		MemberVO memberVO = new MemberVO();
+		
+		memberVO.setUserid("kang");
+		memberVO.setUserpw("9999");
+		
+		mapper.login(memberVO);
+		
+		log.info("result : " + mapper.login(memberVO));
 	}
 }
