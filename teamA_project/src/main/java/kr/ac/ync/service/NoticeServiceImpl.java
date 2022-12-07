@@ -15,7 +15,12 @@ public class NoticeServiceImpl implements  NoticeService {
 
     private final NoticeMapper mapper;
 
-   
+	@Override
+	public int createNotice(NoticeVO notice) {
+		return mapper.createNotice(notice);
+	}
+    
+    
     @Override
     public int getTotal() {
         return mapper.getTotal();
@@ -29,6 +34,28 @@ public class NoticeServiceImpl implements  NoticeService {
 	@Override
 	public NoticeVO getNoticeDetail(Long notice_idx) {
 		return mapper.getNoticeDetail(notice_idx);
+	}
+
+	@Override
+	public List<NoticeVO> getNoticeAllList() {
+		return mapper.getNoticeAllList();
+	}
+
+	@Override
+	public int updateViewCount(Long notice_idx) {
+		return mapper.updateViewCount(notice_idx);
+	}
+
+
+	@Override
+	public int modifyNotice(NoticeVO noticeVO) {
+		return mapper.modifyNotice(noticeVO);
+	}
+
+
+	@Override
+	public int deleteNotice(Long notice_idx) {
+		return mapper.deleteNotice(notice_idx);
 	}
 	
 	

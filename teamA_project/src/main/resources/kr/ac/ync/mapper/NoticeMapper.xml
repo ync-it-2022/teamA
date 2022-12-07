@@ -37,6 +37,17 @@
         ]]>
     </select>
     
+    <select id="getNoticeAllList" resultType="kr.ac.ync.domain.NoticeVO">
+        <![CDATA[
+        SELECT  /*+INDEX_DESC(notice pk_notice) */
+        		notice_idx,
+                title,
+                reg_date,
+                view_count
+        FROM   	notice
+        ]]>
+    </select>
+    
     <select id="getNoticeDetail" resultType="kr.ac.ync.domain.NoticeVO">
     	<![CDATA[
     	SELECT	notice_idx,
@@ -49,6 +60,25 @@
 		WHERE	notice_idx = #{notice_idx}
     	]]>
     </select>
+    
+    <update id="updateViewCount">
+    	UPDATE 	notice
+    	SET		view_count = view_count + 1
+    	WHERE	notice_idx = #{notice_idx}
+    </update>
+    
+    <update id="modifyNotice">
+    	UPDATE	notice
+    	SET		title = #{title},
+    			content = #{content}
+		WHERE	notice_idx = #{notice_idx}
+    </update>
+    
+    <delete id="deleteNotice">
+    	DELETE
+    	FROM	notice
+    	WHERE	notice_idx = #{notice_idx}
+    </delete>
 
     <select id="getTotal" resultType="int">
         SELECT count(*) FROM notice WHERE notice_idx > 0
