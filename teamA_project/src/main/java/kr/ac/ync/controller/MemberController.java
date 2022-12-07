@@ -46,12 +46,11 @@ public class MemberController {
 	}
 	
 	@PostMapping("/login")
-	public String login(HttpServletRequest request, MemberVO vo, 
-						RedirectAttributes rttr) {
+	public String login1() {
 	
 		log.info("로그인 메소드 진입");
-		log.info("전달된 데이터: " + vo);
+		log.info("전달된 데이터: ");
 		
-		return null;
+		return "redirect:/";
 	}
 }
