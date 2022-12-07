@@ -14,21 +14,19 @@
               </div>
               	<div class="card-body">
 					<form id='createForm' action='/notice/create' method='post'>
-  						<div class="form-group">
-							<div class="form-group">
-								<label>제목</label>
-								<input class="form-control" name="title" value="" />
-							</div>
-							<div class="form-group">
-								<label>내용</label>
-								<textarea
-								class="form-control"
-								rows="5"
-								name="content"
-								></textarea>
-							</div>
-							<button id="create" type="submit" class="btn btn-primary">Create</button>
-							</div>
+						<div class="form-group">
+							<label>제목</label>
+							<input class="form-control" name="title" value="" />
+						</div>
+						<div class="form-group">
+							<label>내용</label>
+							<textarea
+							class="form-control"
+							rows="5"
+							name="content"
+							></textarea>
+						</div>
+						<button id="create" type="submit" class="btn btn-primary">Create</button>
 						</div>
 					</form>
               	</div>

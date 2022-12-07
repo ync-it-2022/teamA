@@ -56,15 +56,28 @@ public class NoticeController {
 	}
 	
 	@GetMapping("/create")
-	public String NoticeCreate() {
+	public String createNotice() {
 		return "admin/controll_notice_create";
 	}
 	
 	
 	@PostMapping("/create")
-	public String NoticeCreate(NoticeVO noticeVO) {
+	public String createNotice(NoticeVO noticeVO) {
 		noticeVO.setMember_idx(1L);
 		service.createNotice(noticeVO);
+		return "redirect:/notice/management";
+	}
+	
+	@PostMapping("/modify")
+	public String modifyNotice(NoticeVO noticeVO) {
+		service.modifyNotice(noticeVO);
+		return "redirect:/notice/management";
+	}
+	
+	@PostMapping("/delete")
+	public String deleteNotice(Long notice_idx) {
+		service.deleteNotice(notice_idx);
+		System.out.println(notice_idx);
 		return "redirect:/notice/management";
 	}
 }

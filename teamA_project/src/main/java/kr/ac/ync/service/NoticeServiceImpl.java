@@ -45,6 +45,18 @@ public class NoticeServiceImpl implements  NoticeService {
 	public int updateViewCount(Long notice_idx) {
 		return mapper.updateViewCount(notice_idx);
 	}
+
+
+	@Override
+	public int modifyNotice(NoticeVO noticeVO) {
+		return mapper.modifyNotice(noticeVO);
+	}
+
+
+	@Override
+	public int deleteNotice(Long notice_idx) {
+		return mapper.deleteNotice(notice_idx);
+	}
 	
 	
 }
