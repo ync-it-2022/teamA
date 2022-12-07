@@ -70,17 +70,17 @@
 								<div class="rlr-authforms__inputgroup">
 									<label class="rlr-form-label rlr-form-label--light required">
 										ID </label> <input type="text" autocomplete="off"
-										class="form-control form-control--light" name="userid" />
+										class="form-control form-control--light" name="username" />
 								</div>
 								<div class="rlr-authforms__inputgroup">
 									<label class="rlr-form-label rlr-form-label--light required">
 										Password </label> <input type="password" autocomplete="off"
-										class="form-control form-control--light" name="userpw" />
+										class="form-control form-control--light" name="password" />
 								</div>
 								<div class="rlr-authforms__forgotpassword">
 									<div class="form-check-inline">
 										<input class="form-check-input rlr-form-check-input"
-											id="rlr-checkbox-1" type="checkbox" value="defaultValue" />
+											id="rlr-checkbox-1" type="checkbox" value="defaultValue" name="remember-me"/>
 										<label
 											class="rlr-form-label rlr-form-label--checkbox rlr-form-label--font-inherit rlr-form-label--bold"
 											for="rlr-checkbox-1">Remember me on this device</label>
