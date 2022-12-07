@@ -18,18 +18,20 @@ import kr.ac.ync.domain.Criteria;
 import kr.ac.ync.domain.PageDTO;
 import kr.ac.ync.service.BoardService;
 import kr.ac.ync.util.UploadUtils;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
+@RequiredArgsConstructor
 @RequestMapping("/board")
 public class BoardController {
 
 	@Value("${globalConfig.uploadPath}")
 	private String uploadPath;
 
-	@Autowired
-	private BoardService service; 
+
+	private final BoardService service; 
 
 	@GetMapping("/register")
 	@PreAuthorize("isAuthenticated()")

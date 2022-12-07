@@ -1,11 +1,17 @@
 package kr.ac.ync.controller;
 
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.ac.ync.domain.Criteria;
+import kr.ac.ync.domain.NoticeVO;
 import kr.ac.ync.domain.PageDTO;
 import kr.ac.ync.service.NoticeService;
 import lombok.RequiredArgsConstructor;
@@ -23,12 +29,42 @@ public class NoticeController {
 		int total = service.getTotal();
 		model.addAttribute("list", service.getNoticeList(cri));
 		model.addAttribute("pageMaker", new PageDTO(cri, total));
-
-		System.out.println(new PageDTO(cri, total));
 	}
 	
-	@GetMapping(value = "/detail")
-	public String noticeDetail(Model model) {
+	@GetMapping("/detail")
+	public String noticeDetail(Model model, Long notice_idx, @ModelAttribute("cri")Criteria cri) {
+		
+		model.addAttribute("notice", service.getNoticeDetail(notice_idx));
+		service.updateViewCount(notice_idx);
+		
 		return "notice_detail";
+	}
+	
+	@GetMapping("/management")
+	public String adminNotice(Model model) {
+		
+		model.addAttribute("list", service.getNoticeAllList());
+		return "admin/controll_notice";
+	}
+	
+	@GetMapping("/management/{notice_idx}")
+	public String adminNoticeModify(Model model, @PathVariable("notice_idx") Long notice_idx) {
+		
+		model.addAttribute("notice", service.getNoticeDetail(notice_idx));
+		
+		return "admin/controll_notice_modify";
+	}
+	
+	@GetMapping("/create")
+	public String NoticeCreate() {
+		return "admin/controll_notice_create";
+	}
+	
+	
+	@PostMapping("/create")
+	public String NoticeCreate(NoticeVO noticeVO) {
+		noticeVO.setMember_idx(1L);
+		service.createNotice(noticeVO);
+		return "redirect:/notice/management";
 	}
 }

@@ -22,4 +22,9 @@ public class NoticeServiceTests {
 
         noticeService.getNoticeList(cri);
     }
+    
+    @Test
+    public void getNoticeDetailTest() {
+    	noticeService.getNoticeDetail(1L);
+    }
 }

@@ -116,19 +116,21 @@
   </main>
   
  <script type="text/javascript">
-   let actionForm = $("#actionForm");
+ 	let actionForm = $("#actionForm");
+   	$(document).ready(function() {
 
-   $(".paginate_button a").on("click", function(e) {
-     e.preventDefault();
-     actionForm.find("input[name='pageNum']").val($(this).attr("href"));
-     actionForm.submit();
-   });
+	   $(".paginate_button a").on("click", function(e) {
+	     e.preventDefault();
+	     actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+	     actionForm.submit();
+	   });
 
-   $(".move").on("click",function(e) {
-     e.preventDefault();
-     actionForm.append("<input type='hidden' name='notice_idx' value='" + $(this).attr("href")	+ "'>");
-     actionForm.attr("action", "/notice/detail");
-     actionForm.submit();
+	   $(".move").on("click",function(e) {
+	     e.preventDefault();
+	     actionForm.append("<input type='hidden' name='notice_idx' value='" + $(this).attr("href")	+ "'>");
+	     actionForm.attr("action", "/notice/detail");
+	     actionForm.submit();
+	   });
    });
 </script>
   
