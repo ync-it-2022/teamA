@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.ync.mapper.RoomsMapper">
+	<insert id="register">
+		INSERT INTO ROOMS (room_idx, name, explain, facilities, check_in_time, check_out_time, category, 
+						   address, avg_rated, reg_date, price,
+							picture1, picture2, picture3, picture4, picture5, picture6, picture7, picture8, 
+							picture9, picture10, view_count)							
+				VALUES	  (seq_rooms_idx.nextval, #{name}, #{explain}, #{facilities}, 
+							#{check_in_time}, #{check_out_time}, #{category}, 
+							#{address}, #{avg_rated}, #{reg_date}, #{price}
+							, #{picture1}, #{picture2}, #{picture3}, #{picture4},
+							 #{picture5}, #{picture6}, #{picture7}, #{picture8}, 
+							 #{picture9}, #{picture10}, #{view_count})			
+	</insert>
+	
+		<select id="read" resultType="kr.ac.ync.domain.RoomsVO">
+		select * from rooms where room_idx = #{rooms_Idx}
+	</select>
+	
+		<select id="getList" resultType="kr.ac.ync.domain.RoomsVO">
+		<![CDATA[
+		select * from rooms where room_idx > 0 
+		]]>
+	</select>
+	
+	
+		<delete id="delete">
+		delete rooms where room_idx = #{room_idx}
+	</delete>
+ 
+	<update id="update">
+		update	rooms
+		set		name= #{name}
+ 				<!-- explain=#{explain},
+				facilities = #{facilities},
+				check_in_time = #{check_in_time},
+				check_out_time = #{check_out_time},
+				category = #{category},
+				address = #{address},
+				avg_rated = #{avg_rated},
+				reg_date = #{reg_date},
+				price = #{price},
+				picture1 = #{picture1},
+				picture2 = #{picture2},
+				picture3 = #{picture3},
+				picture4 = #{picture4},
+				picture5 = #{picture5},
+				picture6 = #{picture6},
+				picture7 = #{picture7},
+				picture8 = #{picture8},
+				picture9 = #{picture9},
+				picture10 = #{picture10} -->
+				<!-- updateDate = sysdate --> 
+				
+		where 	room_idx = #{room_idx}
+	</update>
+	
+</mapper>
