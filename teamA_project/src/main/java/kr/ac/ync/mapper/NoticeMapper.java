@@ -20,4 +20,8 @@ public interface NoticeMapper {
     public int createNotice(NoticeVO notice);
 
     public int getTotal();
+    
+    public int modifyNotice(NoticeVO noticeVO);
+    
+    public int deleteNotice(Long notice_idx);
 }

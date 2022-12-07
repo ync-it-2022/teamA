@@ -37,7 +37,7 @@
                     ><c:out value="${notice.content}"/></textarea>
                   </div>
                   <button type="submit" id='modify' class="btn btn-success">Modify</button>
-                  <button type="submit" id='remove' class="btn btn-danger">Remove</button>
+                  <button type="submit" id='delete' class="btn btn-danger">Remove</button>
                   </div>
                 </form>
                 </div>
@@ -55,20 +55,23 @@
           $("#modifyForm #modify").on("click", function(e) {
             e.preventDefault();
   
-          if(!createForm.find("input[name='title']").val()) {
+          if(!modifyForm.find("input[name='title']").val()) {
             alert("제목을 입력해주세요");
             return false;
           }
-          if(!createForm.find("textarea[name='content']").val()) {
+          if(!modifyForm.find("textarea[name='content']").val()) {
             alert("내용을 입력해주세요");
             return false;
           }
           
-          createForm.submit();
+          modifyForm.submit();
           });
 
           $("#modifyForm #delete").on("click", function(e) {
             e.preventDefault();
+            modifyForm.attr("action", "/notice/delete");
+            
+           	modifyForm.submit();
           });
         });
       </script>

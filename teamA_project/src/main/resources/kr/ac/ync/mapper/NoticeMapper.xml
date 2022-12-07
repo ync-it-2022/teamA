@@ -66,6 +66,19 @@
     	SET		view_count = view_count + 1
     	WHERE	notice_idx = #{notice_idx}
     </update>
+    
+    <update id="modifyNotice">
+    	UPDATE	notice
+    	SET		title = #{title},
+    			content = #{content}
+		WHERE	notice_idx = #{notice_idx}
+    </update>
+    
+    <delete id="deleteNotice">
+    	DELETE
+    	FROM	notice
+    	WHERE	notice_idx = #{notice_idx}
+    </delete>
 
     <select id="getTotal" resultType="int">
         SELECT count(*) FROM notice WHERE notice_idx > 0

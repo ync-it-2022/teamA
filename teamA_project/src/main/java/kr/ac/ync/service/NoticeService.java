@@ -18,4 +18,8 @@ public interface NoticeService {
     NoticeVO getNoticeDetail(Long notice_idx);
     
     int updateViewCount(Long notice_idx);
+    
+    int modifyNotice(NoticeVO noticeVO);
+    
+    int deleteNotice(Long notice_idx);
 }
