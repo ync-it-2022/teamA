@@ -1,5 +1,11 @@
 package kr.ac.ync.controller;
 
+<<<<<<< HEAD
+=======
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+>>>>>>> 085f32a70a55c5ad6a2cc435610d72078d323755
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +44,7 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
+<<<<<<< HEAD
 	
 	//아이디 중복체크
 	@PostMapping("/idcheck")
@@ -62,4 +69,6 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
+=======
+>>>>>>> 085f32a70a55c5ad6a2cc435610d72078d323755
 }

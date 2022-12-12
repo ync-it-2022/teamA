@@ -60,7 +60,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 offset-lg-4">
-						<form class="rlr-authforms" action="/member/login" method="POST"
+						<form class="rlr-authforms" action="/login" method="post"
 							id="loginform">
 							<div class="rlr-authforms__header">
 								<h2>Log in to your emprise</h2>
@@ -70,17 +70,17 @@
 								<div class="rlr-authforms__inputgroup">
 									<label class="rlr-form-label rlr-form-label--light required">
 										ID </label> <input type="text" autocomplete="off"
-										class="form-control form-control--light" name="userid" />
+										class="form-control form-control--light" name="username" />
 								</div>
 								<div class="rlr-authforms__inputgroup">
 									<label class="rlr-form-label rlr-form-label--light required">
 										Password </label> <input type="password" autocomplete="off"
-										class="form-control form-control--light" name="userpw" />
+										class="form-control form-control--light" name="password" />
 								</div>
 								<div class="rlr-authforms__forgotpassword">
 									<div class="form-check-inline">
 										<input class="form-check-input rlr-form-check-input"
-											id="rlr-checkbox-1" type="checkbox" value="defaultValue" />
+											id="rlr-checkbox-1" type="checkbox" value="defaultValue" name="remember-me"/>
 										<label
 											class="rlr-form-label rlr-form-label--checkbox rlr-form-label--font-inherit rlr-form-label--bold"
 											for="rlr-checkbox-1">Remember me on this device</label>
@@ -95,6 +95,7 @@
 									Don’t have an account? <a href="./signup.html">Sign up</a>
 								</p>
 							</div>
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						</form>
 					</div>
 				</div>
@@ -111,7 +112,7 @@
 				e.preventDefault();
 				alert("로그인 버튼 작동함");
 				/* 로그인 메서드 서버 요청 */
-				$("#loginform").attr("action", "/member/login");
+				$("#loginform").attr("action", "/login");
 				$("#loginform").submit();
 			});
 			
