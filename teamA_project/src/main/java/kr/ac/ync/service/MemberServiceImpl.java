@@ -21,16 +21,23 @@ public class MemberServiceImpl implements MemberService {
 
 	private final MemberMapper mapper;
 
-	@Override	
+	@Override
 	public int register(MemberVO memberVO) {
 		log.info("register ......" + memberVO);
-		
+
 		return mapper.register(memberVO);
 	}
 
 	@Override
 	public MemberVO login(MemberVO memberVO) {
 		return mapper.login(memberVO);
+	}
+
+	@Override
+	public int idcheck(String id) {
+		int cnt = mapper.idcheck(id);
+		System.out.println("cnt: " + cnt);
+		return cnt;
 	}
 
 }

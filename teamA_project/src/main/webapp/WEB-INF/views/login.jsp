@@ -70,7 +70,8 @@
 								<div class="rlr-authforms__inputgroup">
 									<label class="rlr-form-label rlr-form-label--light required">
 										ID </label> <input type="text" autocomplete="off"
-										class="form-control form-control--light" name="username" />
+										class="form-control form-control--light" name="username"
+										 />
 								</div>
 								<div class="rlr-authforms__inputgroup">
 									<label class="rlr-form-label rlr-form-label--light required">
@@ -80,8 +81,8 @@
 								<div class="rlr-authforms__forgotpassword">
 									<div class="form-check-inline">
 										<input class="form-check-input rlr-form-check-input"
-											id="rlr-checkbox-1" type="checkbox" value="defaultValue" name="remember-me"/>
-										<label
+											id="rlr-checkbox-1" type="checkbox" value="defaultValue"
+											name="remember-me" /> <label
 											class="rlr-form-label rlr-form-label--checkbox rlr-form-label--font-inherit rlr-form-label--bold"
 											for="rlr-checkbox-1">Remember me on this device</label>
 									</div>
@@ -95,7 +96,8 @@
 									Don’t have an account? <a href="./signup.html">Sign up</a>
 								</p>
 							</div>
-							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+							<input type="hidden" name="${_csrf.parameterName}"
+								value="${_csrf.token}" />
 						</form>
 					</div>
 				</div>
@@ -115,7 +117,7 @@
 				$("#loginform").attr("action", "/login");
 				$("#loginform").submit();
 			});
-			
+
 		});
 	</script>
 </body>
