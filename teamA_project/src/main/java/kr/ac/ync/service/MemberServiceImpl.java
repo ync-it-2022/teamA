@@ -33,4 +33,13 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.login(memberVO);
 	}
 
+	@Override
+	public int idcheck(String id) {
+		int cnt = mapper.idcheck(id);
+		
+		System.out.println("cnt : "+ cnt);
+		
+		return cnt;
+	}
+
 }

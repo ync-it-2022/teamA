@@ -1,7 +1,5 @@
 package kr.ac.ync.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.ac.ync.domain.MemberVO;
 import kr.ac.ync.service.MemberService;
@@ -38,6 +37,16 @@ public class MemberController {
 		memberservice.register(vo);
 		
 		return "redirect:/";
+	}
+	
+	//아이디 중복체크
+	@PostMapping("/idcheck")
+	@ResponseBody
+	public int idCheck(@RequestParam("id") String id) {
+		
+		int cnt = memberservice.idcheck(id);
+		
+		return cnt;
 	}
 	
 	@GetMapping("/login")

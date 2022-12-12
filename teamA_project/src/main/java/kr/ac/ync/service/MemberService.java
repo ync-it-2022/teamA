@@ -9,4 +9,6 @@ public interface MemberService {
 	
 	/* 로그인 */
 	public MemberVO login(MemberVO memberVO);
+	
+	public int idcheck(String id);
 }

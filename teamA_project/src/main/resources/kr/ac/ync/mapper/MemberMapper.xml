@@ -40,5 +40,11 @@
 		FROM	MEMBER
 		WHERE	userid=#{userid} AND userpw=#{userpw}	
 	</select>
+	
+	<select id="idcheck" parameterType="String" resultType="int">
+		SELECT 	COUNT(userid) 
+		FROM	MEMBER
+		WHERE	userid=#{userid}
+	</select>
 
 </mapper>
