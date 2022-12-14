@@ -23,8 +23,6 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public int register(MemberVO memberVO) {
-		log.info("register ......" + memberVO);
-
 		return mapper.register(memberVO);
 	}
 
